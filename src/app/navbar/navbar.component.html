@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container-fluid" [ngSwitch]="usertype">
+        <ul class="navbar-nav" *ngSwitchCase="'guest'">
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/men">Men</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/women">Women</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/kids">Kids</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/register">Sign up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/alogin">Admin Login</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav" *ngSwitchCase="'user'">
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/men">Men</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/women">Women</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/kids">Kids</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" (click)="ulogout()">Logout</a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav" *ngSwitchCase="'admin'">
+            <li class="nav-item">
+                <a class="nav-link active" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/mngproduct">Manage Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/vieworders">View Orders</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" (click)="alogout()">Logout</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>

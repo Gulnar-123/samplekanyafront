@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <h1 class="text-center">Register Here</h1>
+    <div class="row justify-content-center">
+        <div class="col-sm-8">
+            <form class="row g-3 " (ngSubmit)="submitdata()">
+                <div class="col-md-9">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" name="nm" [(ngModel)]="r.name">
+                </div>
+                <div class="col-md-3">
+                    <label for="inputMobile" class="form-label">Mobile no</label>
+                    <input type="number" class="form-control" id="inputMobile" name="mob" [(ngModel)]="r.mobileno">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="em" [(ngModel)]="r.email">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPassword4" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" name="ps" [(ngModel)]="r.password">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="ad1"
+                        [(ngModel)]="r.address">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress2" class="form-label">Address 2</label>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                        name="ad2" [(ngModel)]="r.address2">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputCity" class="form-label">City</label>
+                    <input type="text" class="form-control" id="inputCity" name="ct" [(ngModel)]="r.city">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputState" class="form-label">State</label>
+                    <select id="inputState" class="form-select" name="st" [(ngModel)]="r.state">
+                        <option selected>Choose...</option>
+                        <option>Maharashtra</option>
+                        <option>Gujrat</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputZip" class="form-label">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" name="zp" [(ngModel)]="r.zip">
+                </div>
+                <div class="col-12">
+                    <label class="form-label">Gender</label>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="radio1" name="gender" value="Male" checked
+                            [(ngModel)]="r.gender">Male
+                        <label class="form-check-label" for="radio1"></label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" id="radio2" name="gender" value="Female"
+                            [(ngModel)]="r.gender">Female
+                        <label class="form-check-label" for="radio2"></label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="gender" value="Other"
+                            [(ngModel)]="r.gender">Other
+                        <label class="form-check-label"></label>
+                    </div>
+
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
